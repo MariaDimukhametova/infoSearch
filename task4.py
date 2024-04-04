@@ -88,7 +88,7 @@ def calculate_tfidf(zip_f, lemmas_index, tokens_index):
                 idf = calculate_idf(lemma, lemmas_index)
                 res_lemmas.append(f"{lemma} {idf} {tf * idf}")
 
-        with open(f"{lemmas_tfidf_dir}{f.filename}.txt", "w", encoding='utf-8') as lemma_f:
+        with open(f"{_dir}{f.filename}.txt", "w", encoding='utf-8') as lemma_f:
             lemma_f.write("\n".join(res_lemmas))
 
 
