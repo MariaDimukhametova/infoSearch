@@ -26,7 +26,7 @@ def build_index():
 
     inverted_index = {}
 
-    for i, filename in enumerate(filenames):
+    for filename in filenames:
         content = read_file(join(data_dir, filename))
         text = BeautifulSoup(content, 'html.parser').get_text().lower()
 
